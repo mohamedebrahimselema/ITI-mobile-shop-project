@@ -1,0 +1,196 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/* line 9, ../sass/main.scss */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* line 17, ../sass/main.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 21, ../sass/main.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  box-sizing: border-box;
+}
+
+/* line 30, ../sass/main.scss */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right top, rgba(128, 214, 113, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+/* line 39, ../sass/main.scss */
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+/* line 45, ../sass/main.scss */
+.header__logo {
+  height: 3.5rem;
+}
+
+/* line 49, ../sass/main.scss */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+/* line 56, ../sass/main.scss */
+.heading-primary--main {
+  display: block;
+  letter-spacing: 3.5rem;
+  font-size: 6rem;
+  font-weight: 40rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  /*  
+  animation-delay: 3s; 
+  animation-iteration-count: 3;
+  */
+}
+
+/* line 69, ../sass/main.scss */
+.heading-primary--sub {
+  display: block;
+  letter-spacing: 1.74rem;
+  font-size: 2rem;
+  font-weight: 700;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+}
+
+/* line 78, ../sass/main.scss */
+.header__text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* line 130, ../sass/main.scss */
+.logo:hover {
+  animation: moveInRight 1s ease-out;
+}
+
+/* line 134, ../sass/main.scss */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+}
+
+/* line 145, ../sass/main.scss */
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* line 150, ../sass/main.scss */
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+/* line 155, ../sass/main.scss */
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* line 160, ../sass/main.scss */
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+/* line 173, ../sass/main.scss */
+.btn--white::after {
+  background-color: #fff;
+}
+
+/* line 177, ../sass/main.scss */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* line 182, ../sass/main.scss */
+.btn--animation {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
