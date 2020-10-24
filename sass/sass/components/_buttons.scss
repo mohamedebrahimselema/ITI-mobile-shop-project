@@ -1,6 +1,5 @@
 ﻿.btn {
 
-
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -25,6 +24,7 @@
     &--white {
         background-color: #fff;
         color: #777;
+        margin: 1rem;
 
         &::after {
             background-color: #fff;

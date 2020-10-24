@@ -1,9 +1,80 @@
+@import "utilities/_variables";
 @import "base/_typography";
 @import "base/_animation";
 @import "base/_base";
-@import "components/_buttons";
 @import "layout/_header";
-@import "utilities/_variables";
+@import "components/_buttons";
 
 
 
+
+.container {
+    position: relative;
+    top: 40%;
+    left: 40%;
+    width: 30rem;
+
+    &__login-form {
+        align-content: center;
+
+        &--email {
+            border-radius: 1rem;
+            width: 90%;
+            border: 3px solid ;
+            display: inline-block;
+            padding: 1.2rem 2rem;
+            margin: 1rem;
+            border: 1px solid #ccc;
+        }
+    }
+}
+.lables-text {
+    font-weight: bold;
+    color: black;
+}
+
+.btn-login {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #527d8f;
+}
+
+.card:hover {
+    box-shadow: 5px 5px grey;
+}
+
+.btn {
+    font-size: 14px;
+    margin-top: 20px;
+    background-color: #527d8f;
+    color: white;
+}
+
+#item_cards {
+    justify-content: center;
+    margin: auto !important;
+}

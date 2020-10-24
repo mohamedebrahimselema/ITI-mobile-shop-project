@@ -1,84 +1,224 @@
-/*
-Error: Undefined variable: "$color-white".
-        on line 2 of C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/base/_typography.scss
-        from line 1 of C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/main.scss
-
-1: @import "base/_typography";
-2: @import "base/_animation";
-3: @import "base/_base";
-4: @import "components/_buttons";
-5: @import "layout/_header";
-6: @import "utilities/_variables";
-
-Backtrace:
-C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/base/_typography.scss:2
-C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/main.scss:1
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
-org/jruby/RubyArray.java:2412:in `map'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-org/jruby/RubyArray.java:2412:in `map'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:88:in `with_import'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:88:in `with_import'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-org/jruby/RubyArray.java:2412:in `map'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `visit_children'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/engine.rb:268:in `render'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `render'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-org/jruby/RubyMethod.java:128:in `call'
-file:/C:/Users/selema/Desktop/iti/compass.app/compass-app.jar!/hook/compass_patch.rb:108:in `update_stylesheet'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
-org/jruby/RubyArray.java:1613:in `each'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `watch'
-org/jruby/RubyProc.java:271:in `call'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:252:in `on_change'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:290:in `initialize_adapter'
-org/jruby/RubyProc.java:271:in `call'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Users/selema/Desktop/iti/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapter.rb:297:in `start_poller'
+/* line 1, ../sass/base/_typography.scss */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+/* line 7, ../sass/base/_typography.scss */
+.heading-primary--main {
+  display: block;
+  letter-spacing: 3.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+    /*  
+animation-delay: 3s; 
+animation-iteration-count: 3;
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$color-white\".\A         on line 2 of C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/base/_typography.scss\A         from line 1 of C:/Users/selema/Desktop/project/ITI-mobile shop project/sass/sass/main.scss\A \A 1: @import \"base/_typography\";\A 2: @import \"base/_animation\";\A 3: @import \"base/_base\";\A 4: @import \"components/_buttons\";\A 5: @import \"layout/_header\";\A 6: @import \"utilities/_variables\";"; }
+}
+/* line 20, ../sass/base/_typography.scss */
+.heading-primary--sub {
+  display: block;
+  letter-spacing: 1.36rem;
+  font-size: 2rem;
+  font-weight: 700;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* line 3, ../sass/base/_base.scss */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* line 11, ../sass/base/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 15, ../sass/base/_base.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  box-sizing: border-box;
+}
+
+/* line 1, ../sass/layout/_header.scss */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right top, rgba(128, 214, 113, 0.801), rgba(40, 180, 133, 0.801)), url(../../../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  position: relative;
+}
+/* line 9, ../sass/layout/_header.scss */
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+/* line 15, ../sass/layout/_header.scss */
+.header__logo {
+  height: 3.5rem;
+}
+/* line 19, ../sass/layout/_header.scss */
+.header__text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* line 3, ../sass/components/_buttons.scss */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+}
+/* line 14, ../sass/components/_buttons.scss */
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+/* line 19, ../sass/components/_buttons.scss */
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+/* line 24, ../sass/components/_buttons.scss */
+.btn--white {
+  background-color: #fff;
+  color: #777;
+  margin: 1rem;
+}
+/* line 29, ../sass/components/_buttons.scss */
+.btn--white::after {
+  background-color: #fff;
+}
+/* line 34, ../sass/components/_buttons.scss */
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+/* line 48, ../sass/components/_buttons.scss */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+/* line 53, ../sass/components/_buttons.scss */
+.btn--animation {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+/* line 11, ../sass/main.scss */
+.container {
+  position: relative;
+  top: 40%;
+  left: 40%;
+  width: 30rem;
+}
+/* line 17, ../sass/main.scss */
+.container__login-form {
+  align-content: center;
+}
+/* line 20, ../sass/main.scss */
+.container__login-form--email {
+  border-radius: 1rem;
+  width: 90%;
+  border: 3px solid;
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* line 31, ../sass/main.scss */
+.lables-text {
+  font-weight: bold;
+  color: black;
+}
+
+/* line 36, ../sass/main.scss */
+.btn-login {
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* line 43, ../sass/main.scss */
+.btn-login:hover {
+  opacity: 0.8;
+}
+
+/* line 50, ../sass/main.scss */
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
