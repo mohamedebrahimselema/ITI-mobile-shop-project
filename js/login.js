@@ -1,14 +1,16 @@
 UsersStorage = window.localStorage;
+myStorage = window.sessionStorage;
+
 var users = [{
     id: 0,
     username: "",
     password: "",
     order: []
 }];
-
+var loginedUser;
 if (storageAvailable('localStorage')) {
       alert("local storage is there");
-      users =JSON.parse( localStorage.getItem('users'));
+      users = JSON.parse( localStorage.getItem('users'));
 }
 else {
     alert("no local storage ");
@@ -17,47 +19,21 @@ else {
 //users.setAttribute('id', this.id++);
 
 
-
-
-function register(nameKey, password) {
-    var isExist = false;
-    var len = users.length;
-
-    for (var i = 0; i < len; i++) {
-        if (users[i].username == nameKey) {
-            alert("user is already exist");
-            console.log("user is already exist");
-            isExist = true;
-        }
-        
-    }
-    if (!isExist) {
-        adduser(nameKey, password, len);
-    }
-              
-}
-function adduser(nameKey, password, len) {
-    user = {
-        id: len,
-        username: nameKey,
-        password: password,
-        order: [],
-        isOnline: false
-    }
-    users[len] = user;
-    alert("user is registered");
-    console.log("user is registered");
-    UsersStorage.setItem('users', JSON.stringify(users));
-}
-
-
 function login(nameKey, password) {
     var loginfailed = true;
    
     for (var i = 0; i < users.length; i++) {
         if (users[i].username === nameKey && users[i].password === password) {
             alert("user name and password is correct");
+            loginedUser = [{
+                id: users[i].id,
+                username: users[i].username,
+                password: users[i].password,
+                order: users[i].order
+            }];
+            myStorage.setItem('loginedUser', JSON.stringify(loginedUser));
             console.log("user name and password is correct");
+
             loginfailed = false;
             break;
         }
@@ -68,8 +44,6 @@ function login(nameKey, password) {
     }
 
 }
-
-
 
 
 
