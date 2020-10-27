@@ -51,24 +51,6 @@ function adduser(nameKey, password, len) {
 }
 
 
-function login(nameKey, password) {
-    var loginfailed = true;
-   
-    for (var i = 0; i < users.length; i++) {
-        if (users[i].username === nameKey && users[i].password === password) {
-            alert("user name and password is correct");
-            console.log("user name and password is correct");
-            loginfailed = false;
-            break;
-        }
-    }
-    if (loginfailed) {
-        alert("user name and password is wrong");
-        console.log("user name and password is wrong");
-    }
-
-}
-
 
 
 

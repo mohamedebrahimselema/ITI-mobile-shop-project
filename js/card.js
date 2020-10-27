@@ -1,3 +1,5 @@
+//change username using  js  from local storage
+//$(".placeholder_user p").text("Hello " + localStorage.getItem("usernameKey"));
 UsersStorage = window.localStorage;
 myStorage = window.sessionStorage;
 
@@ -18,7 +20,7 @@ else {
 
 if (storageAvailable('sessionStorage')) {
     alert("sessionStorage is there");
-    loginedUser = JSON.parse(sessionStorage.getItem('loginedUser'));
+    users = JSON.parse(sessionStorage.getItem('users'));
 }
 else {
     alert("no sessionStorage storage ");
@@ -55,8 +57,8 @@ $.ajax({
 });
 
 
-function productDetails(productIndex) {
-    localStorage.setItem("productIndex", productIndex);
+function productDetails(productnumber) {
+    localStorage.setItem("productnumber", productnumber);
     open("../details.html")
     console.log(details)
 }

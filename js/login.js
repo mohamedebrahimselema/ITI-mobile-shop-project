@@ -1,16 +1,24 @@
 UsersStorage = window.localStorage;
 myStorage = window.sessionStorage;
 
+let usernameInput = "s";
+let passwordInput = 1;
 var users = [{
     id: 0,
     username: "",
     password: "",
     order: []
 }];
-var loginedUser;
+var loginedUser = {
+    id: 0,
+    username: "",
+    password: "",
+    order: []
+};
 if (storageAvailable('localStorage')) {
       alert("local storage is there");
-      users = JSON.parse( localStorage.getItem('users'));
+    users = JSON.parse(localStorage.getItem('users'));
+    console.log(users);
 }
 else {
     alert("no local storage ");
@@ -18,8 +26,11 @@ else {
 
 //users.setAttribute('id', this.id++);
 
+$(document).ready(function () {
+function signin() {
+    var nameKey = usernameInput;
+    var password = passwordInput;
 
-function login(nameKey, password) {
     var loginfailed = true;
    
     for (var i = 0; i < users.length; i++) {
@@ -32,9 +43,10 @@ function login(nameKey, password) {
                 order: users[i].order
             }];
             myStorage.setItem('loginedUser', JSON.stringify(loginedUser));
-            console.log("user name and password is correct");
+            console.log(`user name is ${users[i].username}`);
 
             loginfailed = false;
+            openStore();
             break;
         }
     }
@@ -46,7 +58,14 @@ function login(nameKey, password) {
 }
 
 
+    $("#login-anchor").click(signin);
+});
 
+
+
+function openStore() {
+    open("../store.html");
+}
 
 
 
