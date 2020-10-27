@@ -23,12 +23,12 @@
         <div class="container">
             <div class="container__login-form">
                 <label class="lables-text" for="uname"><b>Username</b></label>
-                <input class="container__login-form--email" type="text" placeholder="Enter Username" name="uname" required>
+                <input class="container__login-form--email" id="username" type="text" placeholder="Enter Username" name="uname" required>
 
                 <label class="lables-text" for="psw"><b>Password</b></label>
-                <input class="container__login-form--email" type="password" placeholder="Enter Password" name="psw" required>
+                <input class="container__login-form--email" id="password" type="password" placeholder="Enter Password" name="psw" required>
 
-                <a href="#" class="btn btn--white btn--animation">register</a>
+                <a href="#" id="register-anchor" class="btn btn--white btn--animation">register</a>
 
             </div>
         </div>
@@ -36,6 +36,9 @@
     </header>
 
 
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/register.js"></script>
 
 </body>

@@ -1,4 +1,10 @@
 UsersStorage = window.localStorage;
+//window.onload = function () {
+//    document.getElementById("register-anchor").onclick = function () {
+//        validate()
+//    };
+//}
+
 var users = [{
     id: 0,
     username: "",
@@ -17,25 +23,33 @@ else {
 //users.setAttribute('id', this.id++);
 
 
+$(document).ready(function () {
+    function register() {
 
+            var nameKey = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var isExist = false;
+            var len = users.length;
 
-function register(nameKey, password) {
-    var isExist = false;
-    var len = users.length;
+            for (var i = 0; i < len; i++) {
+                if (users[i].username == nameKey) {
+                    alert("user is already exist");
+                    console.log("user is already exist");
+                    isExist = true;
+                }
 
-    for (var i = 0; i < len; i++) {
-        if (users[i].username == nameKey) {
-            alert("user is already exist");
-            console.log("user is already exist");
-            isExist = true;
+            }
+            if (!isExist) {
+                adduser(nameKey, password, len);
+            }
+
         }
-        
-    }
-    if (!isExist) {
-        adduser(nameKey, password, len);
-    }
-              
-}
+
+    $("#register-anchor").click(register);
+});
+
+
+
 function adduser(nameKey, password, len) {
     user = {
         id: len,
@@ -50,6 +64,50 @@ function adduser(nameKey, password, len) {
     UsersStorage.setItem('users', JSON.stringify(users));
 }
 
+
+
+//function validate() {
+//    var username = document.getElementById('username').value;
+//    var phoneNumber = document.getElementById('PhoneNumber').value;
+//    var userId = document.getElementById('userID').value;
+//    var password = document.getElementById('password').value;
+//    var repeatpassword = document.getElementById('repeatpassword').value;
+//    var email = document.getElementById('Email').value;
+
+//    var userNameResult;
+//    var userNameRegx = /^[a-zA-Z0-9_]+$/;
+//    var strongPasswordRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+//    var phoneRGEX = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+//    var IdReg = /^\d+$/;
+
+//    if (!(password === repeatpassword)) {
+//        alert("password doesn't match retype password");
+//    } else if (!(strongPasswordRegex.test(password))) {
+
+//        alert("password  is weak");
+
+//    }
+
+//    const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//    if (!(emailRegx.test(String(email).toLowerCase()))) {
+//        alert("email : is fault");
+//    }
+
+//    if (username.length > 10) {
+//        userNameResult = userNameRegx.test(username);
+//        alert("user name:  " + userNameResult);
+//    } else {
+//        alert("user name:  less than 10");
+//    }
+
+
+//    var IdResult = IdReg.test(userId);
+//    alert("Id :" + IdResult);
+
+
+//    var phoneResult = phoneRGEX.test(phoneNumber);
+//    alert("phone:" + phoneResult);
+//}
 
 
 

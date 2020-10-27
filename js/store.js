@@ -1,29 +1,6 @@
 UsersStorage = window.localStorage;
 myStorage = window.sessionStorage;
 
-var users = [{
-    id: 0,
-    username: "",
-    password: "",
-    order: []
-}];
-var loginedUser;
-if (storageAvailable('localStorage')) {
-    alert("local storage is there");
-    users = JSON.parse(localStorage.getItem('users'));
-}
-else {
-    alert("no local storage ");
-}
-
-if (storageAvailable('sessionStorage')) {
-    alert("sessionStorage is there");
-    loginedUser = JSON.parse(sessionStorage.getItem('loginedUser'));
-}
-else {
-    alert("no sessionStorage storage ");
-}
-
 
 $.ajax({
     method: "GET",

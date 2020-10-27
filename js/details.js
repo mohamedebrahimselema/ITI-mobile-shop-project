@@ -23,27 +23,34 @@ if (storageAvailable('sessionStorage')) {
 else {
     alert("no sessionStorage storage ");
 }
+var productIndex = JSON.parse(localStorage.getItem('productIndex'));
 
-var productIndex;
-$.ajax({
-    method: "GET",
-    url: "/js/Api.txt",
-    error: function () {
-        $("body").html("<p>An error has occurred</p>");
-    },
-    success: function (responsBody) {
-        let resArr = JSON.parse(responsBody);
-        let content = "";
-        console.log(resArr);
-        productIndex = JSON.parse(localStorage.getItem('productIndex'));
-        for (var x = 0; x < users.length; x++) {
-            if (loginedUser.id == users[x].id) {
-                users[i].order.push(resArr[productIndex]);
-            }
-        }
-    },
+$(document).ready(function () {
+    function addProduct() {
+
+        
+        $.ajax({
+            method: "GET",
+            url: "/js/Api.txt",
+            error: function () {
+                $("body").html("<p>An error has occurred</p>");
+            },
+            success: function (responsBody) {
+                let resArr = JSON.parse(responsBody);
+                let content = "";
+                console.log(resArr);
+                productIndex = JSON.parse(localStorage.getItem('productIndex'));
+                for (var x = 0; x < users.length; x++) {
+                    if (loginedUser[0].id == users[x].id) {
+                        users[x].order.push(resArr[productIndex]);
+                    }
+                }
+            },
+        });
+
+    }
+        $("#addProduct").click(addProduct);
 });
-
 
 
 
