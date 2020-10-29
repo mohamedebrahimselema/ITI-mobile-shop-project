@@ -5,7 +5,7 @@ UsersStorage = window.localStorage;
 //    };
 //}
 
-var users = [{
+let users = [{
     id: 0,
     username: "",
     password: "",
@@ -13,8 +13,8 @@ var users = [{
 }];
 
 if (storageAvailable('localStorage')) {
-      alert("local storage is there");
-      users =JSON.parse( localStorage.getItem('users'));
+    alert("local storage is there");
+    users = JSON.parse(localStorage.getItem('users'));
 }
 else {
     alert("no local storage ");
@@ -26,24 +26,25 @@ else {
 $(document).ready(function () {
     function register() {
 
-            var nameKey = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var isExist = false;
-            var len = users.length;
+        var nameKey = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var isExist = false;
+        var len  = users.length;
+       
 
-            for (var i = 0; i < len; i++) {
-                if (users[i].username == nameKey) {
-                    alert("user is already exist");
-                    console.log("user is already exist");
-                    isExist = true;
-                }
-
-            }
-            if (!isExist) {
-                adduser(nameKey, password, len);
+        for (var i = 0; i < len; i++) {
+            if (users[i].username == nameKey) {
+                alert("user is already exist");
+                console.log("user is already exist");
+                isExist = true;
             }
 
         }
+        if (!isExist) {
+            adduser(nameKey, password, len);
+        }
+
+    }
 
     $("#register-anchor").click(register);
 });
@@ -51,6 +52,7 @@ $(document).ready(function () {
 
 
 function adduser(nameKey, password, len) {
+
     user = {
         id: len,
         username: nameKey,
@@ -62,6 +64,7 @@ function adduser(nameKey, password, len) {
     alert("user is registered");
     console.log("user is registered");
     UsersStorage.setItem('users', JSON.stringify(users));
+    window.location.href = "login.html";
 }
 
 

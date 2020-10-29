@@ -1,8 +1,7 @@
 UsersStorage = window.localStorage;
 myStorage = window.sessionStorage;
+myStorage.clear();
 
-let usernameInput = "s";
-let passwordInput = 1;
 var users = [{
     id: 0,
     username: "",
@@ -28,9 +27,9 @@ else {
 
 $(document).ready(function () {
 function signin() {
-    var nameKey = usernameInput;
-    var password = passwordInput;
 
+    var nameKey  = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
     var loginfailed = true;
    
     for (var i = 0; i < users.length; i++) {

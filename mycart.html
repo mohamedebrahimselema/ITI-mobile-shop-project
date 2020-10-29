@@ -2,55 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="sass/stylesheets/main.css">
-    <title>Lapk|Cart</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+
+    <title>I Mobile</title>
 </head>
 <body>
+    <main>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-    <footer class="footer">
-        <div class="footer__logo-box">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
 
-            <picture class="footer__logo">
-                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
-                        media="(max-width: 37.5em)">
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
-            </picture>
+            <div class="navigation__background">&nbsp;</div>
 
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="about.html" class="navigation__link"><span>01</span>About</a></li>
+                    <li class="navigation__item"><a href="store.html" class="navigation__link"><span>02</span>Store</a></li>
+                    <li class="navigation__item"><a href="login.html" class="navigation__link"><span>03</span>log out</a></li>
+                    <li class="navigation__item"><a href="contactus.html" class="navigation__link"><span>05</span>Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="">
+            <h2>I Mobile</h2>
 
+            <div class="flex-container" id="item_cards">
+            </div>
+
+            <!-- row -->
 
         </div>
-        <div class="row">
-            <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-                    </ul>
+        <footer class="footer">
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">store</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">about us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">Mohamed Selema</a>
+                    </p>
                 </div>
             </div>
-            <div class="col-1-of-2">
-                <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
-                    Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal
-                    and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas
-                    Schmedtmann, is of course highly appreciated!
-                </p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
+
+
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/card.js"></script>
+    <script src="js/mycart.js"></script>
 </body>
 </html>

@@ -15,35 +15,55 @@
 </head>
 
 <body>
+    <main>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
 
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
+            <div class="navigation__background">&nbsp;</div>
 
-        <div class="navigation__background">&nbsp;</div>
-
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="about.html" class="navigation__link"><span>01</span>About</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Store</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>my Card</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>log out</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Contact us</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="">
-        <h2>I Mobile</h2>
-
-        <div class="flex-container" id="item_cards">
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="about.html" class="navigation__link"><span>01</span>About</a></li>
+                    <li class="navigation__item"><a href="store.html" class="navigation__link"><span>02</span>Store</a></li>
+                    <li class="navigation__item"><a href="mycart.html" class="navigation__link"><span>03</span>my Cart</a></li>
+                    <li class="navigation__item"><a href="login.html" class="navigation__link"><span>04</span>log out</a></li>
+                    <li class="navigation__item"><a href="contactus.html" class="navigation__link"><span>05</span>Contact us</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="">
+            <h2>I Mobile</h2>
 
-        <!-- row -->
+            <div class="flex-container" id="item_cards">
+            </div>
 
-    </div>
+            <!-- row -->
+
+        </div>
+        <footer class="footer">
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">store</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">about us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">Mohamed Selema</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
 
 
 
