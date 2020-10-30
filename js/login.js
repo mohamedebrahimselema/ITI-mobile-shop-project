@@ -15,7 +15,7 @@ var loginedUser = {
     order: []
 };
 if (storageAvailable('localStorage')) {
-      alert("local storage is there");
+    alert("local storage is there");
     users = JSON.parse(localStorage.getItem('users'));
     console.log(users);
 }
@@ -25,13 +25,12 @@ else {
 
 //users.setAttribute('id', this.id++);
 
-$(document).ready(function () {
 function signin() {
 
-    var nameKey  = document.getElementById('username').value;
+    var nameKey = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var loginfailed = true;
-   
+
     for (var i = 0; i < users.length; i++) {
         if (users[i].username === nameKey && users[i].password === password) {
             alert("user name and password is correct");
@@ -57,8 +56,6 @@ function signin() {
 }
 
 
-    $("#login-anchor").click(signin);
-});
 
 
 
@@ -95,3 +92,27 @@ function storageAvailable(type) {
             (storage && storage.length !== 0);
     }
 }
+
+
+//validation----------------------------
+const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+$(document).ready(function () {
+
+    function validation() {
+
+        if ($("#username").val().length === 0) {
+            alert("username should be non empty");
+        } else if (!(emailRegx.test(String($("#username").val()).toLowerCase()))) {
+            alert("email : is fault");
+        } else if ($("#password").val().length < 6) {
+            alert("password should be more than 6 letters");
+        } else {
+            signin();
+        }
+
+
+    }
+    $("#login-anchor").click(validation);
+});
